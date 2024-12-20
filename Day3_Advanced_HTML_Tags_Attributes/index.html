@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML5 Semantic Example</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <h1>My Website</h1>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section>
+      <article>
+        <h2>Welcome to My Website</h2>
+        <p>This is a sample website to demonstrate HTML5 semantic elements.</p>
+        <figure>
+          <img src="example.jpg" alt="An example image" />
+          <figcaption>Figure 1: Example image with caption</figcaption>
+        </figure>
+      </article>
+    </section>
+
+    <aside>
+      <h3>Related Articles</h3>
+      <ul>
+        <li><a href="#article1">Article 1 </a></li>
+        <li><a href="#article2">Article 2</a></li>
+      </ul>
+    </aside>
+
+    <section>
+      <h2>About Us</h2>
+      <p>
+        We are a leading company in the industry, committed to providing the
+        best services to our clients.
+      </p>
+
+      <article>
+        <h3>Our Mission</h3>
+        <p>To innovate and lead the market by providing top-notch solutions.</p>
+      </article>
+
+      <article>
+        <h3>Our Vision</h3>
+        <p>
+          To be the most trusted partner for our customers, offering
+          unparalleled quality and service.
+        </p>
+      </article>
+    </section>
+
+    <section>
+      <h2>Contact Us</h2>
+      <form>
+        <fieldset>
+          <legend>Personal Information</legend>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" /><br /><br />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" /><br /><br />
+
+          <label for="birthday">Birthday:</label>
+          <input type="date" id="birthday" name="birthday" /><br /><br />
+        </fieldset>
+
+        <fieldset>
+          <legend>Your Feedback</legend>
+          <label for="feedback">Comments:</label>
+          <textarea id="feedback" name="feedback"></textarea><br /><br />
+
+          <label for="rating">Rate our services:</label>
+          <input
+            type="range"
+            id="rating"
+            name="rating"
+            min="1"
+            max="10"
+          /><br /><br />
+
+          <button type="submit">Submit</button>
+        </fieldset>
+      </form>
+    </section>
+
+    <footer>
+      <p>© 2024 Your Website. All Rights Reserved.</p>
+      <nav>
+        <ul>
+          <li><a href="#privacy-policy">Privacy Policy</a></li>
+          <li><a href="#terms-of-service">Terms of Service</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </footer>
+
+    <details>
+      <summary>More Information</summary>
+      <p>
+        Here you can find additional details about our company and services.
+      </p>
+    </details>
+
+    <dialog id="feedbackDialog">
+      <p>Thank you for your feedback!</p>
+      <button onclick="document.getElementById('feedbackDialog').close()">
+        Close
+      </button>
+    </dialog>
+
+    <template id="templateContent">
+      <p>
+        This content is inside a template and can be instantiated using
+        JavaScript.
+      </p>
+    </template>
+
+    <script>
+      // Example of using the template element
+      const template = document.getElementById("templateContent");
+      document.body.appendChild(document.importNode(template.content, true));
+    </script>
+  </body>
+</html>
